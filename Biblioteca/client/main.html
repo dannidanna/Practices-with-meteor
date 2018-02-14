@@ -1,0 +1,32 @@
+
+<head>
+  <title>Biblioteca APP</title>
+</head>
+
+<body>
+  <h1>Welcome to Meteor!</h1>
+
+  <div id="contenedor-categorias">
+      {{> categories}}
+    </div>
+
+    <div class="input-group">
+        <span class="input-group-addon" id="basic-addon1">@</span>
+        <input type="text" class="form-control" placeholder="Username" aria-describedby="basic-addon1">
+      </div>  
+</body>
+
+
+<template name="categories">
+    <div class="title">Mis obras</div>
+    <div id="categories" class="btn-group">
+      {{#each favoritos}}
+      <div class="category btn btn-inverse">
+        {{Category}}
+      </div>
+      {{/each}}
+    </div>
+  
+  </template>
+
+  
